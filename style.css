@@ -1,0 +1,177 @@
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101214;
+    color: #7A7C80;
+
+}
+
+h2,.white{
+    color: #fff;
+}
+
+a{
+    color: #7A7C80;
+    text-decoration: none;
+}
+/* section 1 */
+.section-1{
+    /*padding-top: 40vh;*/
+    text-align: center;
+    position: sticky; /* Rendre cette section collante */
+    top: 0; /* Coller en haut de l'écran lors du scrolling */
+    height: 100vh; /* Occuper toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
+}
+
+.section-1 p{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin:0;
+}
+
+.section-1 h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-1 a {
+    font-size: 1.5rem;
+    padding: 10px;
+    display: inline-block; /* Pour aligner en ligne */
+}
+
+.section-1 .icons {
+    display: inline-flex; /* Aligner les icônes en ligne */
+    gap: 10px; /* Espacement entre les icônes */
+    justify-content: center; /* Centrer les icônes */
+}
+
+
+/* section 2 */
+.section-2{
+    padding-top: 10vh;
+    width: 70%;
+    overflow-y: auto; /* Activer le défilement vertical */
+    margin-bottom: 10vh;
+}
+
+.section-2 h2{
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.section-2 p{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin-top:5px;
+}
+
+.section-2 a{
+    display: block;
+    padding: 5px;
+    font-size: 1.2rem;
+    padding-left: 0;
+    width: 100px;
+}
+
+.section-2 li{
+    margin-bottom: 5px;
+}
+
+/* Section Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    gap: 20px; /* Espace entre les logos */
+    margin-top: 20px;
+    justify-content: start; /* Alignement des logos à gauche */
+    align-items: center;
+    margin-left: 40px;
+}
+
+
+.skills i { /* Icônes Font Awesome */
+    font-size: 2rem; /* Taille plus petite des icônes */
+    color: #7A7C80; /* Couleur des icônes Font Awesome */
+    transition: transform 0.2s ease; /* Animation au survol */
+    cursor: pointer; /* Changer le curseur au survol */
+}
+
+.skills .logo {
+    width: 30px; /* Taille des images externes */
+    height: 30px;
+}
+
+/* animations / utilities */
+.section-2 a:hover{
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-1 a:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.white:hover{
+    position: relative;
+    padding-left: 10px;
+}
+
+/* media queres */
+@media(max-width:780px){
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .section-1{
+        padding:0;
+        padding-top: 5rem;
+    }
+    .section-2{
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+.project-list li h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.project-list li p {
+    font-size: 1.1rem;
+    color: #7a7c80;
+}
+
+.project-list li h3 {
+    margin: 0;
+}
+
+/* Couleur pour le statut "In Progress" (moins agressive, opacité réduite) */
+.status.in-progress {
+    color: rgba(255, 166, 0, 0.639); /* orange avec opacité réduite */
+    font-size: 18px;
+}
+
+/* Couleur pour le statut "Completed" avec un vert plus léger */
+.status.completed {
+    color: rgba(0, 255, 0, 0.441); /* vert plus léger avec opacité réduite */
+    font-size: 18px;
+}
